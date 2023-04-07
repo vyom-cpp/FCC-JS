@@ -24,3 +24,37 @@
 - > Compound Assignment with Augmented Subtraction.
 - > Compound Assignment with Augmented Multiplication.
 - > Compound Assignment with Augmented Division.
+- > Escaping literal Quotes in Strings.
+- > Quoting Strings with Single Quotes.
+- > Escape Sequences in Strings.
+- > Concatenating Strings with Plus Operator.
+- > Concatenating Strings with Plus Equals Operator.
+- > Constructing Strings with Variables.
+- > Appending Variables to Strings.
+- > Find the Length of a String.
+- > Use Bracket Notation to Find the First Character in String.
+- > Understand String Immutability.
+- > Use Bracket Notation to Find the Nth Character in String.
+- > Use Bracket Notation to Find the Last Character in String.
+- > Use Bracket Notation to Find the Nth-to-Last Character in a String.
+- > Word Blanks.
+- > Store Multiple Values in one Variable using Arrays.
+- > Nest one Array within Another Array.
+- > Access Array Data with Indexes.
+- > Modify Array Data with Indexes.
+- > Access Multi-Dimensional Arrays with Indexes.
+- > Manipulate Array with push method.
+- > Manipulate Arrays with pop method.
+- > Manipulate Arrays with shift method.
+- > Manipulate Arrays with unshift method.
+- > Shopping List.
+- > Write reusable JS with Functions.
+- > Passing Values to Function with Arguments.
+- > Return a Value from a Function with Return.
+- > Global Scope and Functions.
+- > Local Scope and Functions.
+- > Global vs Local Scope in Functions.
+- > Understanding Undefined Value returned from a Function.
+- > Assignment with a Returned Value.
+- > Stand in Line.
+- > Understanding Boolean Values.
