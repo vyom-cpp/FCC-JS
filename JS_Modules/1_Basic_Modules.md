@@ -58,3 +58,8 @@
 - > Assignment with a Returned Value.
 - > Stand in Line.
 - > Understanding Boolean Values.
+- > Use Conditional Logic with If statements.
+- > Comparison with Equality Operator.
+- > Comparison with the Strict Equality Operator.
+- > Practice comparing different values.
+- > Comparison with the Inequality Operator.s
