@@ -98,3 +98,16 @@
 - > Iterate with JavaScript For Loops.
 - > Iterate Odd Numbers With a For Loop.
 - > Count Backwards with a For Loop.
+- > Iterate through an Array with a For Loop.
+- > Nesting For Loops.
+- > Iterate with JavaScript Do...While Loops. 
+- > Replace Loops using Recursion.
+- > Profile Lookup.
+- > Generate Random Fractions with JavaScript.
+- > Generate Random Whole Numbers within a Range. 
+- > Use the parselnet Function.
+- > Use the parselnet Function with a Radix.
+- > Use the Conditional (Ternary) Operator.
+- > Use the Multiple Conditional (Ternary) Operators.
+- > Use Recursion to Create a Countdown.
+- > Use Recursion to create a Range of Numbers.
