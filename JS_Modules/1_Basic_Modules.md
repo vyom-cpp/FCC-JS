@@ -50,3 +50,10 @@
 - > Shopping List.
 - > Write reusable JS with Functions.
 - > Passing Values to Function with Arguments.
+- > Return a Value using Return.
+- > Global Scope & Functions.
+- > Local Scope & Functions.
+- > Global vs Local Scope in Functions.
+- > Understanding Undefined Value returned from a Functions.
+- > Assignment with a Returned Value.
+- > 
