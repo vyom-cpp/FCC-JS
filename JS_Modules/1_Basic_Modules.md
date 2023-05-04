@@ -56,4 +56,17 @@
 - > Global vs Local Scope in Functions.
 - > Understanding Undefined Value returned from a Functions.
 - > Assignment with a Returned Value.
-- > 
+- > Stand in Line.
+- > Understanding Boolean Values.
+- > Understanding Conditional Logic with If Statements.
+- > Comparison with Equality Operator.
+- > Comparison with Strict Equality Operator.
+- > Practice Comparing Different Values.
+- > Comparison with Inequality Operator.
+- > Comparison with Strict Inequality Operator.
+- > Comparison with Greater Than Operator.
+- > Comparison with Greater Than Or Equal To Operator.
+- > Comparison with Less Than Operator.
+- > Comparison with Less Than Or Equal To Operator.
+- > Comparison with Logical AND Operator.
+- > Comparison with Logical OR Operator.
