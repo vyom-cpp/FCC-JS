@@ -70,4 +70,28 @@
 - > Comparison with Less Than Or Equal To Operator.
 - > Comparison with Logical AND Operator.
 - > Comparison with Logical OR Operator.
-- > Introducing Else Statements
+- > Introducing Else Statements.
+- > Introducing Else IF Statements.
+- > Logical Order in If Else Statements.
+- > Chaining If Else Statements.
+- > Golf Code.
+- > Selecting from many options with Switch Statements.
+- > Adding a default option in Switch Statements.
+- > Multiple Identical Options in Switch Statements.
+- > Replacing If Else Chains with Switch.
+- > Returning Boolean Values from Functions.
+- > Return Early Pattern for Functions.
+- > Counting Cards.
+- > Build JavaScript Objects.
+- > Accessing Object Properties with Dot Notation.
+- > Accessing Object Properties with Bracket Notation.
+- > Accessing Object Properties with Variables.
+- > Updating Object Properties.
+- > Add new properties to a JavaScript Objects.
+- > Delete properties from JavaScript Objects.
+- > Using Objects for Lookups.
+- > Testing Object for Properties.
+- > Manipulating Complex Objects.
+- > Accessing Nested Objects.
+- > Accessing Nested Arrays.
+- > Record Collection.
