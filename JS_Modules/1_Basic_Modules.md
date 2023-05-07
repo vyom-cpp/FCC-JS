@@ -95,3 +95,6 @@
 - > Accessing Nested Objects.
 - > Accessing Nested Arrays.
 - > Record Collection.
+- > Iterate with JavaScript While Loops.
+- > Iterate with JavaScript For Loops.
+- > Count Backwards with a For Loop.
