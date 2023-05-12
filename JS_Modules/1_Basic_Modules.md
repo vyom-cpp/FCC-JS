@@ -98,3 +98,16 @@
 - > Iterate with JavaScript While Loops.
 - > Iterate with JavaScript For Loops.
 - > Count Backwards with a For Loop.
+- > Iterate through an array with a For Loop.
+- > Nesting For Loops.
+- > Iterate with JavaScript Do...while Loop.
+- > Replace Loops using Recursion.
+- > Profile Lookup.
+- > Generate Random Fractions with JavaScript.
+- > 
+- > 
+- > 
+- > 
+- > 
+- > 
+- > 
