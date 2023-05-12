@@ -98,3 +98,17 @@
 - > Iterate with JavaScript While Loops.
 - > Iterate with JavaScript For Loops.
 - > Count Backwards with a For Loop.
+- > Iterate through an array with For Loop.
+- > Nesting For Loops.
+- > Iterate with Javascript Do...While Loop.
+- > Replace Loops using Recursion.
+- > Profile Lookup. 
+- > Generate random fraction with JavaScript.
+- > Generate random whole numbers with Javascript.
+- > Generate random whole numbers within a range.
+- > Use the parselnt function.
+- > Use the parselnt function with a radix.
+- > Use Conditional Operators.
+- > Use Multiple Conditional Operators.
+- > Use Recursion to create a countdown.
+- > Use Recursion to create a range of numbers.
