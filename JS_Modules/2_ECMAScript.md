@@ -66,3 +66,34 @@ return arr1.concat(arr2);
 
 console.log(myConcat([1, 2], [3, 4, 5]));
 ```
+
+6. Set Default Parameter for your Function.
+```js
+function increment(number, value = 1) {
+    return number + value;
+}
+console.log(increment(5, 2)); // returns 7
+console.log(increment(5)); // returns NaN
+```
+
+7. Use the Rest Parameter with Function Parameter.
+```js 
+const sum = (...args) => {
+let total = 0;
+for (let i = 0; i < args.length; i++) {
+    total += args[i];
+}
+return total;
+}
+```
+
+8. Use the Spread Operator to Evaluate Arrays In-Place.
+```js
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+(function() {
+"use strict";
+arr2 = [...arr1]; // change this line
+})();
+console.log(arr2);
+```
