@@ -97,3 +97,33 @@ arr2 = [...arr1]; // change this line
 })();
 console.log(arr2);
 ```
+
+9. Use Destructing Assignment to Extract Values from Objects.
+```js
+const HIGH_TEMPERATURES = {
+yesterday: 75,
+today: 77,
+tomorrow: 80
+};
+
+// change code below this line
+
+const {today, tomorrow} = HIGH_TEMPERATURES;
+
+// change code above this line
+
+
+console.log(today); // should be 77
+console.log(tomorrow); // should be 80
+```
+
+10. Use Destructing Assignment to Assign Variables from Objects.
+```js
+const HIGH_TEMPERATURES = {
+yesterday: 75,
+today: 77,
+tomorrow: 80
+};
+
+const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
+```
