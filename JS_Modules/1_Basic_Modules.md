@@ -201,3 +201,192 @@ console.log(backslashString);
 ```js
 const myStr = "I am a \"double quoted\" string inside \"double quotes\"."; 
 ```
+
+- > **Quoting Strings with Single Quotes**
+```js
+const doubleQuoteStr = "This is a string"; 
+const singleQuoteStr = 'This is also a string';
+// A string has the same kind of quote at the beginning and end. But if you have that same quote somewhere in the middle, the string will stop early and throw an error.
+```
+
+- > **Escape Sequences in Strings**
+```js
+/* \'	single quote
+\"	double quote */
+\\	//backslash
+\n	//newline
+\t	//tab
+\r	//carriage return
+\b	//backspace
+\f	//form feed
+```
+
+- > **Concatenating Strings with Plus Operator**
+```js
+const myStr = "This is the start. " + "This is the end.";
+// When the + operator is used with a String value, it is called the concatenation operator. Concatenation does not add spaces between concatenated strings.
+```
+
+- > **Concatenating Strings with the Plus Equals Operator**
+```js
+let myStr = "This is the first sentence. ";
+myStr += "This is the second sentence.";
+```
+
+- > **Constructing Strings with Variables**
+```js
+const myName = "Vyom";
+const myStr = "My name is " + myName + " and I am well!";
+// It will display My name is Vyom and I am well!
+```
+
+- > **Appending Variables to Strings**
+```js
+const someAdjective = "easy";
+let myStr = "Learning to code is ";
+myStr += someAdjective;
+// ust as we can build a string over multiple lines out of string literals, we can also append variables to a string using the plus equals (+=) operator.
+```
+
+- > **Find the Length of a String**
+```js
+// Setup
+let lastNameLength = 0;
+const lastName = "Lovelace";
+
+// Only change code below this line
+lastNameLength = lastName.length;
+// The output will be 8
+// You can find the length of a String value by writing .length after the string variable or string literal.
+```
+
+- > **Use Bracket Notation to Find the First Character in a String**
+```js
+let firstLetterOfLastName = "";
+const lastName = "Lovelace";
+firstLetterOfLastName = lastName[0];  // It will show the first letter i.e. L
+// Bracket notation is a way to get a character at a specific index within a string.
+```
+
+- > **Understand String Immutability**
+```js
+let myStr = "Bob";
+myStr[0] = "J";
+//  The following code will produce an error because the letter B in the string Bob cannot be changed to the letter J, to change myStr would be to assign it with a new value, like this.
+let myStr = "Bob";
+myStr = "Job";
+```
+
+- > **Use Bracket Notation to Find the Nth Character in a String**
+```js
+const lastName = "Lovelace";
+const thirdLetterOfLastName = lastName[2]; 
+// It will return the thrid letter i.e. v
+```
+
+- > **Use Bracket Notation to Find the Last Character in a String**
+```js
+const lastName = "Lovelace";
+const lastLetterOfLastName = lastName[lastName.length - 1]; 
+// It will return the last character in the string i.e. e
+```
+
+- > **e Bracket Notation to Find the Nth-to-Last Character in a String**
+```js
+const lastName = "Lovelace";
+const secondToLastLetterOfLastName = lastName[lastName.length - 2];
+// It will return a character i.e. c. whatever is subtracted from the length, count from the last will be your answer.
+```
+
+- > **Word Blanks**
+```js
+const myNoun = "dog";
+const myAdjective = "big";
+const myVerb = "ran";
+const myAdverb = "quickly";
+const wordBlanks = "The " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + ".";
+```
+
+- > **Store Multiple Values in one Variable using JavaScript Arrays**
+```js
+const myArray = ["Hellu", 69];
+// With JavaScript array variables, we can store several pieces of data in one place.
+```
+
+- > **Nest one Array within Another Array**
+```js
+const myArray = [["Virat", 18], ["Rohit", 45]];
+// This is also called a multi-dimensional array.
+```
+
+- > **Access Array Data with Indexes**
+```js
+const array = [50, 60, 70];
+console.log(array[0]);
+const data = array[1];
+// The console.log(array[0]) prints 50, and data has the value 60.
+```
+
+- > **Modify Array Data With Indexes**
+```js
+const ourArray = [50, 40, 30];
+ourArray[0] = 15;
+// ourArray now has the value [15, 40, 30].
+```
+
+- > **Access Multi-Dimensional Array with Indexes**
+```js
+const arr = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14]
+];
+const subarray = arr[3];
+const nestedSubarray = arr[3][0];
+const element = arr[3][0][1];
+// Subarray has the value [[10, 11, 12], 13, 14], nestedSubarray has the value [10, 11, 12], and element has the value 11.
+```
+
+- > **Manipulate Arrays With push Method**
+```js
+const arr1 = [1, 2, 3];
+arr1.push(4, 5);
+const arr2 = ["Stimpson", "J", "cat"];
+arr2.push(["happy", "joy"]);
+// arr1 now has the value [1, 2, 3, 4, 5] and arr2 has the value ["Stimpson", "J", "cat", ["happy", "joy"]].
+// This function adds the element from the last
+```
+
+- > **Manipulate Arrays With pop Method**
+```js
+const threeArr = [1, 4, 6];
+const oneDown = threeArr.pop();
+console.log(oneDown);
+console.log(threeArr);
+// The first console.log will display the value 6, and the second will display the value [1, 4].
+// This function removes the element from the beginning
+```
+
+- > **Manipulate Arrays With shift Method**
+```js
+const ourArray = ["Stimpson", "J", ["cat"]];
+const removedFromOurArray = ourArray.shift();
+// removedFromOurArray would have a value of the string Stimpson, and ourArray would have ["J", ["cat"]].
+// This function removes the element from the beginning
+```
+
+- > **Manipulate Arrays With unshift Method**
+```js
+const ourArray = ["Stimpson", "J", "cat"];
+ourArray.shift();
+ourArray.unshift("Happy");
+// After the shift, ourArray would have the value ["J", "cat"]. After the unshift, ourArray would have the value ["Happy", "J", "cat"].
+// This function adds the element from the beginning
+```
+
+- > **Shopping List**
+```js
+const myList = [["Virat", 18], ["Rohit", 45], ["Dhoni", 7], ["Ronaldo", 7], ["Messi", 10]];
+// Create a shopping list in the variable myList. The list should be a multi-dimensional array containing several sub-arrays.
+```
