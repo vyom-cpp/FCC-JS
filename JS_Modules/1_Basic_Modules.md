@@ -124,3 +124,80 @@ i = i - 1;
 const myDecimal = 5.7;
 // We can store decimal numbers in variables too. Decimal numbers are sometimes referred to as floating point numbers or floats.
 ```
+
+- > **Multiply Two Decimals with JavaScript**
+```js
+const product = 2.0 * 2.5;
+// In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
+``` 
+
+- > **Divide One Decimal by Another with JavaScript**
+```js
+const quotient = 4.4 / 2.0; 
+```
+
+- > **Finding a remainder in JavaScript**
+```js
+const remainder = 11%3;
+// The remainder operator % gives the remainder of the division of two numbers.
+```
+
+- > **Compound Assignment With Augmented Addition**
+```js
+myVar = myVar + 5;
+// to add 5 to myVar.
+let myVar = 1;
+myVar += 5;
+console.log(myVar);
+// It would display 6 to the console.
+```
+
+- > **Compound Assignment With Augmented Subtraction**
+```js
+myVar = myVar - 5;
+// will subtract 5 from myVar. This can be rewritten as:
+myVar -= 5;
+```
+
+- > **Compound Assignment With Augmented Multiplication**
+```js
+myVar = myVar * 5;
+// will multiply myVar by 5. This can be rewritten as:
+myVar *= 5;
+```
+
+- > **Compound Assignment With Augmented Division**
+```js
+myVar = myVar / 5;
+Will divide myVar by 5. This can be rewritten as:
+myVar /= 5;
+```
+
+- > **Escaping Literal Quotes in Strings**
+```js
+// In JavaScript, strings are pieces of text that you put inside either single quotes (') or double quotes (")
+// To solve this problem, you "escape" the quote character. Escaping means you tell JavaScript that the quote should be part of the text, not the end of the text. You do this by putting a backslash (\) in front of the quote character.
+```
+```js
+var singleQuotedString = 'This is a single-quoted string with a single quote: \'escaped quote\' inside.';
+console.log(singleQuotedString);
+```
+```js
+var doubleQuotedString = "This is a double-quoted string with a double quote: \"escaped quote\" inside.";
+console.log(doubleQuotedString);
+```
+```js
+var mixedQuotesString = 'This string contains "double quotes" and \'single quotes\' without any need to escape.';
+console.log(mixedQuotesString);
+```
+```js
+var escapedCharacters = "This is a string with a newline: Hello\nWorld and a tab: Hello\tWorld";
+console.log(escapedCharacters);
+```
+```js
+var backslashString = "To include a backslash, use two: \\\\";
+console.log(backslashString);
+```
+```js
+const myStr = "I am a \"double quoted\" string inside \"double quotes\"."; 
+```
