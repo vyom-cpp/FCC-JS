@@ -937,3 +937,267 @@ console.log(cardCount(7)); // Current count: 0
 // Cards 2 through 6 are considered low, so when any of them is dealt, the count is increased by 1.
 // Cards 10, J, Q, K, and A are considered high, so when any of them is dealt, the count is decreased by 1.
 ```
+
+- > **Build JavaScript Objects**
+```js
+const myDog = {
+  name: "Pluto",
+  legs: 4,
+  tails: 1,
+  friends: ["humans", "other dogs"]
+};
+// Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through properties. All properties are stored as string but if the object has non-string properties then JS will automatically typecast it as a string.
+```
+
+- > **Accessing Object Properties with Dot Notation**
+```js
+const testObj = {
+  "hat": "ballcap",    // Alternate way [hat: "ballcap",]
+  "shirt": "jersey",    // Alternate way [shirt: "jersey",]
+  "shoes": "cleats"  // Alternate way [shoes: "cleats"]
+};
+const hatValue = testObj.hat;      // Property hat is accessed
+const shirtValue = testObj.shirt;  // Property shirt is accessed
+// There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+```
+
+- > **Accessing Object Properties with Bracket Notation**
+```js
+const myObj = {
+  "Space Name": "Kirk",
+  "More Space": "Spock",
+  "NoSpace": "USS Enterprise"
+};
+myObj["Space Name"];
+myObj['More Space'];
+myObj["NoSpace"];
+```
+
+- > **Accessing Object Properties with Variables**
+```js
+const dogs = {
+  Fido: "Mutt",
+  Hunter: "Doberman",
+  Snoopie: "Beagle"
+};
+const myDog = "Hunter";
+const myBreed = dogs[myDog];
+console.log(myBreed); // The String Doberman will be displayed
+// Another use of bracket notation on objects is to access a property which is stored as the value of a variable. 
+```
+
+- > **Updating Object Properties**
+```js
+const myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.name = "Happy Coder";
+// After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable. You can use either dot or bracket notation to update.
+```
+
+- > **Add New Properties to a JavaScript Object**
+```js
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.bark = "woof";  // First way to add a new property to a JS Object
+myDog["bark"] = "woof"; // Second way to add a new property to a JS Object
+```
+
+- > **Delete Properties from a JavaScript Object**
+```js
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+delete myDog.tails;  // First way to delete a property from a JS Object
+delete myDog["tails"];  // Second way to delete a property from a JS Object
+```
+
+- > **Using Objects for Lookups**
+```js
+function phoneticLookup(val) {
+  var result = "";
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+//We can make use of the variable `result` to let the function return the correct value.
+  result = lookup[val];
+  return result;
+}
+```
+
+- > **Testing Objects for Properties**
+```js
+function checkObj(obj, checkProp) {
+  if(obj.hasOwnProperty(checkProp)){
+    return obj[checkProp];
+  } else{
+  return "Not Found";
+  }
+}
+// To check if a property on a given object exists or not, you can use the .hasOwnProperty() method.
+```
+
+- > **Manipulating Complex Objects**
+```js
+const myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  {
+    artist: "Taylor Swift",
+    title: "1989",
+    release_year: 1989,
+    formats: [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    gold: true
+  }
+];
+// A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+```
+
+- > **Accessing Nested Objects**
+```js
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+const gloveBoxContents = myStorage.car.inside["glove box"];  // String "maps" is accessed
+// The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+```
+
+- > **Accessing Nested Arrays**
+```js
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+const secondTree = myPlants[1].list[1];  // Pine is accessed
+// Similar to accessing nested objects, array bracket notation can be chained to access nested arrays.
+```
+
+- > **Record Collection**
+```js
+var recordCollection = {
+    101: {
+        title: "Abbey Road",
+        artist: "The Beatles",
+        tracks: ["Come Together", "Something", "Oh! Darling"]
+    },
+    102: {
+        title: "Thriller",
+        artist: "Michael Jackson",
+        tracks: ["Thriller", "Beat It", "Billie Jean"]
+    },
+    103: {
+        title: "Back in Black",
+        artist: "AC/DC",
+        tracks: ["Hells Bells", "Back in Black", "You Shook Me All Night Long"]
+    }
+};
+// Accessing record information
+console.log(recordCollection[101].title); // Outputs: Abbey Road
+console.log(recordCollection[102].artist); // Outputs: Michael Jackson
+// Adding a new record
+recordCollection[104] = {
+    title: "The Dark Side of the Moon",
+    artist: "Pink Floyd",
+    tracks: ["Money", "Us and Them", "Time"]
+};
+```
+
+- > **Iterate with JavaScript While Loops**
+```js
+const myArray = [];
+let i=5;
+while (i>=0) {
+  myArray.push(i);
+  i--;
+} // myArray = [5,4,3,2,1,0]
+```
+
+- > **Iterate with JavaScript For Loops**
+```js
+const myArray = [];
+for(let i=1; i<=5; i++){
+  myArray.push(i);
+} // myArray = [1,2,3,4,5]
+```
+
+- > **Iterate Odd Numbers with a For Loop**
+```js
+const myArray = [];
+for(let i=1; i<10; i+=2){
+  myArray.push(i);
+} // myArray = [1,3,5,7,9]
+// For loops don't have to iterate one at a time. By changing our final-expression, we can count by even numbers.
+```
+
+- > **Count backwards with a For Loop**
+```js
+const myArray = [];
+for(let i=9; i>0; i-=2){
+  myArray.push(i); 
+} // myArray = [9,7,5,3,1]
+```
+
+- > **Iterate through an array with a For Loop**
+```js
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+// total + myArr[0] -> 0 + 2 = 2 
+// total + myArr[1] -> 2 + 3 = 5
+// total + myArr[2] -> 5 + 4 = 9
+// total + myArr[3] -> 9 + 5 = 14 
+// total + myArr[4] -> 14 + 6 = 20
+```
