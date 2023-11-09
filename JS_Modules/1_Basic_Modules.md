@@ -496,3 +496,444 @@ function processArg(num) {
 processed = processArg(7);
 // The function returns the number i.e. 2
 ```
+
+- > **Stand in Line**
+```js
+function nextInLine(arr, item) {
+  arr.push(item); // It adds a number at the end of the array
+  const removed = arr.shift(); // It remves the first element of the array
+  return removed; // It returns the removed number
+}
+let testArr = [1, 2, 3, 4, 5]; 
+// In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
+```
+
+- > **Understanding Boolean Values**
+```js
+function welcomeToBooleans() {
+  return true;
+}
+// Another data type is the Boolean. Booleans may only be one of two values: true or false. They are basically little on-off switches, where true is on and false is off. These two states are mutually exclusive. Boolean values are never written with quotes.
+```
+
+- > **Use Conditional Logic with If Statements**
+```js
+// Pseudo Code
+if (condition is true) {
+  statement is executed
+}
+function isCondition(wasThatTrue) {
+  if(wasThatTrue) {
+    return "Yes, that is true";
+  }
+  return "No, that is false";
+}
+```
+
+- > **Comparison with the Equality Operator**
+```js
+function testEqual(val) {
+  if (val == 12) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+testEqual(10);
+// The most basic operator is the equality operator ==.
+```
+
+- > **Comparison with the Strict Equality Operator**
+```js
+function testStrict(val) {
+  if (val===7) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+testStrict(10);  // The function will return the string Equal when val is strictly equal to 7.
+// Strict equality (===) is the counterpart to the equality operator (==). 
+```
+
+- > **Practice comparing different values**
+```js
+function compareEquality(a, b) {
+  if (a === b) { // This function returns the string Equal only when the values are strictly equal.
+    return "Equal";
+  }
+  return "Not Equal";
+}
+compareEquality(10, "10");
+// 3 == '3' returns true because JavaScript performs type conversion from string to number. 3 === '3' returns false because the types are different and type conversion is not performed. To determine the type of a variable or a value with the typeof operator, as follows:
+typeof 3  // It will return the string number
+typeof '3'  // It will return the string string
+```
+
+- > **Comparison with Inequality Operators**
+```js
+function testNotEqual(val) {
+  if (val != 99) { // The function will return Not Equal  when val is not equal to 99
+    return "Not Equal";
+  }
+  return "Equal";
+}
+testNotEqual(10);
+// The inequality operator (!=) is the opposite of the equality operator. 
+```
+
+- > **Comparison with Strict Inequality Operators**
+```js
+function testStrictNotEqual(val) {
+  if (val !== 17) { // The function will return Not Equal when val is not strictly equal to 17.
+    return "Not Equal";
+  }
+  return "Equal";
+}
+testStrictNotEqual(10);
+// The strict inequality operator (!==) is the logical opposite of the strict equality operator. It means "Strictly Not Equal"
+```
+
+- > **Comparison with Greater Than Operator**
+```js
+function testGreaterThan(val) {
+  if (val > 100) {  // The function will work for val greater than 100
+    return "Over 100";
+  }
+  if (val > 10) {  // The function will work for val greater than 10
+    return "Over 10";
+  }
+  return "10 or Under";
+}
+testGreaterThan(10);
+// It compares values of two numbers (>), if the number to left is greater than the number to right, it returns true otherwise it returns false.
+```
+
+- > **Comparison with Greater Than Or Equal To Operator**
+```js
+function testGreaterOrEqual(val) {
+  if (val>=20) {  // The function will work for val greater or equal to 20
+    return "20 or Over";
+  }
+  if (val>=10) {  // The function will work for val greater or equal to 10
+    return "10 or Over";
+  }
+  return "Less than 10";
+}
+testGreaterOrEqual(10);
+// If the number to the left is greater than or equal to the number to the right, it returns true. Otherwise, it returns false.
+```
+
+- > **Comparison with the Less Than Operator**
+```js
+function testLessThan(val) {
+  if (val<25) {  // The function will work for val less than 25
+    return "Under 25";
+  }
+  if (val<55) {  // The function will work for val less than 55
+    return "Under 55";
+  }
+  return "55 or Over";
+}
+testLessThan(10);
+// If the number to the left is less than the number to the right, it returns true. Otherwise, it returns false.
+```
+
+- > **Comparison with the Less Than Or Equal To Operator**
+```js
+function testLessOrEqual(val) {
+  if (val<=12) {  // The function will work for value equal or less than 12
+    return "Smaller Than or Equal to 12";
+  }
+  if (val<=24) {  // The function will work for value equal or less than 24
+    return "Smaller Than or Equal to 24";
+  }
+  return "More Than 24";
+}
+testLessOrEqual(10);
+//  If the number to the left is less than or equal to the number to the right, it returns true, otherwise it returns false.
+```
+
+- > **Comparison with Logical And Operator**
+```js
+function testLogicalAnd(val) {
+  if (val<=50 && val>=25) {
+      return "Yes"; 
+  }
+  return "No";
+}
+testLogicalAnd(10);
+// The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+```
+
+- > **Comparison with Logical Or Operator**
+```js
+function testLogicalOr(val) {
+  if (val<10 || val>20) {
+    return "Outside";
+  }
+  return "Inside";
+}
+testLogicalOr(15);
+// The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+```
+
+- > **Introducing Else Statements**
+```js
+function testElse(val) {
+  let result = "";
+  if (val > 5) {
+    result = "Bigger than 5";
+  }else{
+    result = "5 or Smaller";
+  }
+  return result;
+}
+testElse(4);
+// When a condition for an if statement is false, then with an else statement, an alternate block of code will be executed.
+```
+
+- > **Introducing Else If Statements**
+```js
+if (num > 15) {
+  return "Bigger than 15";
+} else if (num < 5) {
+  return "Smaller than 5";
+} else {
+  return "Between 5 and 15";
+}
+```
+
+- > **Logical Order in If Else Statements**
+```js
+function orderMyLogic(val) {
+  if (val < 5) {
+    return "Less than 5";
+  } else if (val < 10) {
+    return "Less than 10";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+orderMyLogic(7);
+```
+
+- > **Chaining If Else Statements**
+```js
+function testSize(num) {
+if(num < 5){
+  return "Tiny";
+} else if(num < 10){
+  return "Small";
+} else if(num < 15){
+  return "Medium";
+} else if(num < 20){
+  return "Large";
+} else if(num >= 20){
+  return "Huge";
+} else{
+  return "Change Me";
+}
+}
+testSize(7);
+```
+
+- > **Golf Code**
+```js
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+function golfScore(par, strokes) {
+  if(strokes == 1){
+    return "Hole-in-one!"
+  } else if(strokes <= par-2){
+    return "Eagle";
+  } else if(strokes == par-1){
+    return "Birdie";
+  } else if(strokes == par){
+    return "Par";
+  } else if(strokes == par+1){
+    return "Bogey";
+  } else if(strokes == par+2){
+    return "Double Bogey"
+  } else if(strokes >= par+3){
+    return "Go Home!"
+  } else {
+    return "Change Me";
+  }
+}
+golfScore(5, 4);
+```
+
+- > **Selecting from many options with Switch Statements**
+```js
+function caseInSwitch(val) {
+  let answer = "";
+  switch(val) {
+    case 1:
+    answer = "alpha";
+    break;
+    case 2:
+    answer = "beta";
+    break;
+    case 3:
+    answer = "gamma";
+    break;
+    case 4:
+    answer = "delta";
+    break;
+  }
+  return answer;
+}
+caseInSwitch(1);
+// A switch statement compares the value to the case statements which define various possible values. Any valid JavaScript statements can be executed inside a case block and will run from the first matched case value until a break is encountered.
+```
+
+- > **Adding a Default Option in Switch Statements**
+```js
+function switchOfStuff(val) {
+  let answer = "";
+  switch(val){
+    case "a":
+    answer = "apple";
+    break;
+    case "b":
+    answer = "bird";
+    break;
+    case "c":
+    answer = "cat";
+    break;
+    default:
+    answer = "stuff";
+  }
+  return answer;
+}
+switchOfStuff(1);
+```
+
+- > **Multiple Identical Options in Switch Statements**
+```js
+function sequentialSizes(val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      return "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      return "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      return "High";
+      break;
+  }
+  return answer;
+}
+sequentialSizes(1);
+```
+
+- > **Replacing If Else Chains with Switch**
+```js
+function chainToSwitch(val) {
+  let answer = "";
+  switch (val) {
+  case "bob":
+    answer = "Marley";
+    break;
+  case 42:
+    answer = "The Answer";
+    break;
+  case 1:
+    answer = "There is no #1";
+    break;
+  case 99:
+    answer = "Missed me by this much!";
+    break;
+  case 7:
+    answer = "Ate Nine";
+    break;
+}
+  return answer;
+}
+chainToSwitch(7);
+```
+
+- > **Returning Boolean Values from Functions**
+```js
+function isLess(a, b) {
+  return a <= b;
+}
+isLess(10, 15);
+```
+
+- > **Return Early Pattern for Functions**
+```js
+function abTest(a, b) {
+  if (a < 0 || b < 0) {
+    return undefined;
+  }
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+abTest(2, 2);
+// When a return statement is reached, the execution of the current function stops and control returns to the calling location.
+```
+
+- > **Counting Cards**
+```js
+let count = 0;
+function cc(card) {
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
+  }
+  if (count > 0) {
+    return count + " Bet";
+  } else {
+    return count + " Hold";
+  }
+}
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+// In the casino game Blackjack, a player can determine whether they have an advantage on the next hand over the house by keeping track of the relative number of high and low cards remaining in the deck. This is called Card Counting.
+
+// From GPT-3.5
+var count = 0;
+function cardCount(card) {
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 10:
+        case 'J':
+        case 'Q':
+        case 'K':
+        case 'A':
+            count--;
+            break;
+    }
+    return "Current count: " + count;
+}
+console.log(cardCount(2)); // Current count: 1
+console.log(cardCount('K')); // Current count: 0
+console.log(cardCount(4)); // Current count: 1
+console.log(cardCount('A')); // Current count: 0
+console.log(cardCount(7)); // Current count: 0
+// Cards 2 through 6 are considered low, so when any of them is dealt, the count is increased by 1.
+// Cards 10, J, Q, K, and A are considered high, so when any of them is dealt, the count is decreased by 1.
+```
