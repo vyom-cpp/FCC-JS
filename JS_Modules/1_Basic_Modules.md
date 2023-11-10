@@ -1201,3 +1201,188 @@ for (let i = 0; i < myArr.length; i++) {
 // total + myArr[3] -> 9 + 5 = 14 
 // total + myArr[4] -> 14 + 6 = 20
 ```
+
+- > **Nesting For Loops**
+```js
+function multiplyAll(arr) {
+  var product = 1;
+  for(var i=0;i<arr.length;i++){ // 'i' is used to access each array in the 'arr'
+    for(var j=0; j<arr[i].length;j++){
+      product*=arr[i][j];
+    }
+  }
+  return product;
+}
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+```
+
+- > **Iterate with JavaScipt Do...While Loops**
+```js
+const myArray = [];
+let i = 10;
+do {
+  myArray.push(i);
+  i++;
+} while(i<10);
+```
+
+- > **Replace Loops using Recursion**
+```js
+function sum(arr, n) {
+  if(n <= 0) {
+    return 0;
+  } else {
+    return sum(arr, n - 1) + arr[n - 1];
+  }
+} // It returns the sum of the first n elements of the array 'arr'.
+// Recursion is a function that calls itself.
+```
+
+- > **Profile Lookup**
+```js
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+function lookUpProfile(name, prop) {
+  for (let x = 0; x < contacts.length; x++) {
+    if (contacts[x].firstName === name) {
+      if (contacts[x].hasOwnProperty(prop)) {
+        return contacts[x][prop];
+      } else {
+        return "No such property";
+      }
+    }
+  }
+  return "No such contact";
+}
+lookUpProfile("Akira", "likes");
+// A lookUpProfile function that takes name and a property (prop) as arguments has been pre-written for you.
+```
+
+- > **Generate Random Fractions with JavaScipt**
+```js
+function randomFraction() {
+  return Math.random();
+} // It will return a random number instead of returning 0.
+// JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). Thus Math.random() can return a 0 but never return a 1.
+```
+
+- > **Generate Random Whole Numbers with JavaScipt**
+```js
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+} // It will return 0 to 9.
+// You can generate random decimal numbers with Math.random(), but sometimes you need to generate random whole numbers. The following process will give you a random whole number less than 20:
+// 1. Use Math.random() to generate a random decimal number.
+// 2. Multiply that random decimal number by 20.
+// 3. Use Math.floor() to round this number down to its nearest whole number.
+```
+
+- > **Generate Random Whole Numbers within a Range**
+```js
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax-myMin+1))+myMin;
+}
+// This formula gives a random whole number in the range from min to max. Take a moment to read it and try to understand what this code is doing.
+```
+
+- > **Use the Parselnt Functions**
+```js
+function convertToInteger(str) {
+return parseInt(str);
+}
+convertToInteger("56"); // It will return 56.
+// The parseInt() function parses a string and returns an integer.
+```
+
+- > **Use the Parselnt Function with a Radix**
+```js
+function convertToInteger(str) {
+  return parseInt(str,2);
+}
+convertToInteger("10011");// It converts a binary number to an integer & returns it.
+// The parseInt() function parses a string and returns an integer. It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
+// parseInt(string, radix);  
+// const a = parseInt("11", 2);
+// const a = parseInt("11", 2);
+// The radix variable says that 11 is in the binary system, or base 2. This example converts the string 11 to an integer 3.
+```
+
+- > **Use the Conditional(Ternary) Operators**
+```js
+function checkEqual(a, b) {
+  return a===b? "Equal" : "Not Equal";
+}
+checkEqual(1, 2); 
+// The syntax is a ? b : c, where a is the condition, b is the code to run when the condition returns true, and c is the code to run when the condition returns false.
+```
+
+- > **Use Multiple Conditional(ternary) Operators**
+```js
+function checkSign(num) {
+  return (num === 0)? "zero":(num>0)? "positive" : "negative";
+}
+checkSign(10);
+```
+
+- > **Use Recursion to Create a Countdown** 
+```js
+function countdown(n) { // Function definition
+  if (n < 1) { // base case
+    return [];
+  } else { // recursion
+    const arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
+  }
+//1. If the value of n is greater than or equal to 1, the countdown function is called recursively with n - 1. This generates the countdown for the numbers smaller than the current value of n.
+//2. The result of the countdown(n - 1) call is stored in the variable arr.
+//3. The current value of n is added to the beginning of the arr array using arr.unshift(n). This effectively adds the current number to the countdown array.
+//4. The modified array arr is returned.
+}
+// When you call countdown with a specific number, say countdown(5), it generates an array containing a countdown from 5 down to 1.
+// Output: [5,4,3,2,1]
+```
+
+- > **Use Recursion to Create a Range of Numbers**
+```js
+function rangeOfNumbers(startNum, endNum) { // Function definition
+  if (endNum < startNum) { // base case
+    return [];
+  } else { // recursion
+    const numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+  // How Recursion works here:
+//1. If the endNum is greater than or equal to the startNum, the function makes a recursive call to rangeOfNumbers with the endNum decremented by 1.
+//2. The result of the recursive call to rangeOfNumbers(startNum, endNum - 1) is stored in the variable numbers.
+//3. The current endNum is added to the numbers array using numbers.push(endNum).
+//4. The modified array numbers is returned.
+}
+// When you call rangeOfNumbers with a specific start and end number, say rangeOfNumbers(3, 7), it generates an array containing a sequence of numbers from the start number to the end number.
+// Output: [3,4,5,6,7]
+```
