@@ -38,6 +38,7 @@ const MATH_CONSTANTS = {
 };
 // Only change code below this line
 Object.freeze(MATH_CONSTANTS);
+// We can overwrite on the const word also from the above example. So by using Object.freeze() ensures that the data is prevented. Any attempt changing this will show you error.
 
 // Only change code above this line
 try {
@@ -56,6 +57,8 @@ const magic = () => {
 "use strict";
 return new Date();
 };
+
+// This is an alrenative option for this `const magic = function()`
 ```
 
 5. Write Arrow Functions with Parameters.
@@ -78,6 +81,7 @@ console.log(increment(5)); // returns NaN
 
 7. Use the Rest Parameter with Function Parameter.
 ```js 
+// The rest parameter in JavaScript allows you to represent an indefinite number of arguments as an array. It provides a way to handle multiple function arguments without explicitly naming them all.
 const sum = (...args) => {
 let total = 0;
 for (let i = 0; i < args.length; i++) {
