@@ -243,3 +243,122 @@ function makeList(arr) {
 
 const failuresList = makeList(result.failure);
 ```
+
+16. Write Concise Object Literal Declarations using Object Property Shorthand.
+```js
+const createPerson = (name, age, gender) => (
+  // Only change code below this line
+  {name, age, gender}
+  // Only change code above this line
+);
+```
+
+17. Write Concise Declarative Functions with ES6.
+```js
+// When defining functions within objects in ES5, we have to use the keyword function as follows.
+const person = {
+  name: "Taylor",
+  sayHello: function() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+// With ES6, you can remove the function keyword and colon altogehter when defining functions in objects.
+const person = {
+  name: "Taylor",
+  sayHello() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+
+// Answer of the step
+// Only change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+```
+
+18. Use class syntax to define a Constructor Function.
+```js
+// ES6 provides a new syntax to create objects, using the class keyword.
+// It should be noted that the class keyword declares a new function, to which a constructor is added. This constructor is invoked when new is called to create a new object.
+// Explicit constructor
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+  takeOff() {
+    console.log("To " + this.targetPlanet + "!");
+  }
+}
+
+// Implicit constructor 
+class Rocket {
+  launch() {
+    console.log("To the moon!");
+  }
+}
+
+const zeus = new SpaceShuttle('Jupiter');
+// prints To Jupiter! in console
+zeus.takeOff();
+
+const atlas = new Rocket();
+// prints To the moon! in console
+atlas.launch();
+
+// Answer of the step
+// Only change code below this line
+class Vegetable {
+  constructor(name) {
+    this.name = name;
+  }
+}
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+```
+
+19. Use getters and setters to control access to an object.
+```js
+// You can obtain values from an object and set the value of a property within an object. These are classically called getters and setters.
+// Getter functions are meant to simply return (get) the value.
+// Setter functions are meant to modify (set) the value.
+// Only change code below this line
+class Thermostat {
+  constructor(fahrenheit) {
+    this._fahrenheit = fahrenheit;
+  }
+  
+  get temperature() {
+    return (5 / 9) * (this._fahrenheit - 32);
+  }
+  
+  set temperature(celsius) {
+    return this._fahrenheit = (celsius * 9.0) / 5 + 32;
+  }
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius 
+```
+
+20. Create a Module Script.
+```js
+<html>
+  <body>
+    <!-- Only change code below this line -->
+    <script type="module" src="index.js"></script>
+    <!-- Only change code above this line -->
+  </body>
+</html>
+```
