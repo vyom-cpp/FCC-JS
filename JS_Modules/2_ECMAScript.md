@@ -134,6 +134,20 @@ const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
 
 11. Use  Destructing Assignment to Assign Variables from Nested Objects
 ```js
+// Explanation and Example
+const user = {
+  johnDoe: { 
+    age: 34,
+    email: 'johnDoe@freeCodeCamp.com'
+  }
+};
+// To extract the values of object properties and assign them to variables with same name:
+const { johnDoe: { age, email }} = user;
+
+// To assign an object properties' values to variables with different names:
+const { johnDoe: { age: userAge, email: userEmail }} = user;
+
+// Answer of the step.
 const LOCAL_FORECAST = {
 yesterday: { low: 61, high: 75 },
 today: { low: 64, high: 77 },
@@ -145,6 +159,8 @@ const { today: { low: lowToday, high: highToday }} = LOCAL_FORECAST;
 
 12. Use Destructing Assignment to Assign Variables from Arrays.
 ```js
+// One key difference between the spread operator and array destructuring is that the spread operator unpacks all contents of an array into a comma-separated list.
+
 let a = 8, b = 6;
 // change code below this line
 [a,b] = [b,a];
@@ -164,4 +180,66 @@ return shorterList;
 
 const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const sourceWithoutFirstTwo = removeFirstTwo(source);
+```
+
+14. Use Destructuring Assignment to Pass an Object as a Function's Parameters.
+```js
+// Explanation and Example
+const profileUpdate = (profileData) => {
+  const { name, age, nationality, location } = profileData;
+}
+// This effectively destructures the object sent into the function. This can also be done in-place.
+const profileUpdate = ({ name, age, nationality, location }) => {
+}
+// When profileData is passed to the above function, the values are destructured from the function parameter for use within the function.
+
+// Answer of the step.
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+// Only change code below this line
+const half = ({ max, min }) => (max + min) / 2.0;
+// Only change code above this line
+```
+
+15. Create strings using template literals.
+```js
+// Explanation and Example
+// Template literals are the special type of strings that makes creating complex strings easier.
+// Template literals allow you to create multi-line strings and to use string interpolation features to create strings.
+const person = {
+  name: "Zodiac Hasbro",
+  age: 56
+};
+
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+
+console.log(greeting);
+// The console will display the strings Hello, my name is Zodiac Hasbro! and I am 56 years old.
+
+// Answer for the step
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+  // Only change code below this line
+  const failureItems = [];
+  for(let i = 0; i < arr.length; i++){
+    failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+  };
+  // Only change code above this line
+
+  return failureItems;
+}
+
+const failuresList = makeList(result.failure);
 ```
