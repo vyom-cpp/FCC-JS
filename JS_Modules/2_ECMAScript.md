@@ -362,3 +362,156 @@ temp = thermos.temperature; // 26 in Celsius
   </body>
 </html>
 ```
+
+21. Use Export to share a code block.
+```js
+// You want to use this function in several different JavaScript files. In order to share it with these other files, you first need to export it.
+export const add = (x, y) => {
+  return x + y;
+}
+// Above is the common way to export a single function
+const add = (x, y) => {
+  return x + y;
+}
+export { add };
+// Above is the another way
+// When you export a variable or function, you can import it in another file and use it without having to rewrite the code. 
+export { add, subtract };
+// To export multiple things.
+
+// Answer of the step.
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+export {uppercaseString, lowercaseString};
+```
+
+22. Reuse JavaScript Code using import.
+```js
+import {uppercaseString, lowercaseString} from './string_functions.js';  
+// Only change code above this line
+uppercaseString("hello");
+lowercaseString("WORLD!");
+```
+
+23. Use * to Import everything from a file.
+```js
+// Suppose you have a file and you wish to import all of its contents into the current file. Syntax is
+// import * as myMathModule from "./math_function.js";
+// The import statement above will create an object called myMathModule.
+import * as stringFunctions from "./string_functions.js";
+// Only change code above this line
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+```
+
+24. Create an Export Fallback with export default.
+```js
+// There is another export syntax known as export default. Usually you will use this syntax if only one value is being exported from a file. It is also used to create a fallback value for a file or module.
+export default function add(x, y) {
+  return x + y;
+}
+
+export default function(x, y) {
+  return x + y;
+}
+// This first is named function, and the second is an anonymous function. You cannot use var, let, or const with export default.
+
+// Answer to the step
+export default function subtract(x, y) {
+  return x - y;
+}
+```
+
+25. Import a default export.
+```js
+// To import a default export, you need to use a different import syntax.
+import add from "./math_functions.js";
+
+// Answer to the step
+import subtract from "./math_functions.js";  
+// Only change code above this line
+
+subtract(7,4);
+```
+
+26. Create a JavaScript Promise.
+```js
+// A promise in JavaScript is exactly what it sounds like - you use it to make a promise to do something, usually asynchronously. When the task completes, you either fulfill your promise or fail to do so. Promise is a constructor function, so you need to use the new keyword to create one. It takes a function, as its argument, with two parameters - resolve and reject.
+
+// Example
+const myPromise = new Promise((resolve, reject) => {
+
+});
+
+// Answer to the step
+const makeServerRequest = new Promise((resolve, reject) => {
+
+});
+```
+
+27. Complete a JavaScript Promise with resolve and reject.
+```js
+// A promise has three states: pending, fulfilled, and rejected. The promise you created in the last challenge is forever stuck in the pending state because you did not add a way to complete the promise. The resolve and reject parameters given to the promise argument are used to do this. resolve is used when you want your promise to succeed, and reject is used when you want it to fail.
+
+// #IMP
+
+// Answer to the step
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer represents a response from a server
+  let responseFromServer;
+
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {	
+    reject("Data not received");
+  }
+});
+```
+
+28. Handle a fulfilled promise with `then`.
+```js
+// #IMP
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+	
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {	
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+});
+```
+
+29. Handle a rejected promise with catch.
+```js
+// #IMP
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to false to represent an unsuccessful response from a server
+  let responseFromServer = false;
+	
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {	
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+});
+
+makeServerRequest.catch(error => {
+  console.log(error);
+});
+```
