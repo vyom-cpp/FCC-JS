@@ -208,3 +208,188 @@ let caboose = "The last car on a train is the caboose";
 let lastRegex = /caboose$/; // Change this line
 let result = lastRegex.test(caboose);
 ```
+
+18. Match All Letters and Numbers
+```js
+// `\w` is the shortcut for the classes [A-Za-z0-9_]. It matches both upper and lower case letters plus numbers.
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // Change this line
+let result = quoteSample.match(alphabetRegexV2).length;
+```
+
+19. Match Everything But Letters and Numbers
+```js
+// The opposite of `\w` is `\W` means `\W` = [^A-Za-z0-9_ ]
+let quoteSample = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let result = quoteSample.match(nonAlphabetRegex).length;
+```
+
+20. Match all numbers
+```js
+// The shortcut to look for digit characters is `\d` = [0-9]
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Change this line
+let result = movieName.match(numRegex).length;
+```
+
+21. Match All Non-Numbers
+```js
+// The opposite of `\d` is `\D` = [^0-9]
+let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let result = movieName.match(noNumRegex).length;
+```
+
+22. Restrict Possible Usernames
+```js
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+let result = userCheck.test(username);
+console.log(result)
+
+// ^ asserts the start of the string.
+// [a-z] matches any lowercase letter from 'a' to 'z'.
+// [a-z]+\d* matches one or more lowercase letters followed by zero or more digits.
+// $ asserts the end of the string.
+// | is the alternation operator, allowing for multiple patterns to be matched.
+// ^[a-z]\d\d+$ matches a lowercase letter followed by exactly two or more digits.
+```
+
+23. Match Whitespaces
+```js
+// You can also match the whitespace or spaces between letters using `\s`
+
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let result = sample.match(countWhiteSpace);
+```
+
+24. Match Non-Whitespace Characters
+```js
+// Search for non-whitespace using `\S`
+
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Change this line
+let result = sample.match(countNonWhiteSpace);
+```
+
+25. Specify Upper and Lower Number of Matches
+```js
+// To match a certain range of patterns, Quantity Specfiers are used with curly braces {}
+
+// For example, to match only the letter a appearing between 3 and 5 times in the string ah, your regex would be /a{3,5}h/.
+let multipleA = /a{3,5}h/;
+
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/; // Change this line
+let result = ohRegex.test(ohStr);
+```
+
+26. Specify Only the Lower Number of Matches
+```js
+// To match only the string hah with the letter a appearing at least 3 times, your regex would be /ha{3,}h/
+
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/; // Change this line
+let result = haRegex.test(haStr);
+```
+
+27. Specify Exact Number of Matches
+```js
+// To match only the word hah with the letter a 3 times, your regex would be /ha{3}h/
+
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/gi; // Change this line
+let result = timRegex.test(timStr);
+```
+
+28. Check for All or None
+```js
+// You can specify the possible existence of an element with a question mark, ?. This checks for zero or one of the preceding element. You can think of this symbol as saying the previous element is optional.
+
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line
+let result = favRegex.test(favWord);
+```
+
+29. Positive and Negative Lookahead
+```js
+// Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along. This can be useful when you want to search for multiple patterns over the same string.
+
+// There are two kinds of lookaheads: positive lookahead and negative lookahead.
+
+// A positive lookahead will look to make sure the element in the search pattern is there, but won't actually match it. A positive lookahead is used as (?=...) where the ... is the required part that is not matched.
+
+// A negative lookahead will look to make sure the element in the search pattern is not there. A negative lookahead is used as (?!...) where the ... is the pattern that you do not want to be there. The rest of the pattern is returned if the negative lookahead part is not present.
+
+// Answer to the step
+
+let sampleWord = "astronaut";
+let pwRegex =  /(?=\w{6})(?=\w*\d{2})/; // Change this line
+let result = pwRegex.test(sampleWord);
+```
+
+30. Check For Mixed Grouping of Characters
+```js
+// Sometimes we want to check for groups of characters using a Regular Expression and to achieve that we use parentheses ().
+
+// If you want to find either Penguin or Pumpkin in a string, you can use the following Regular Expression: /P(engu|umpk)in/g
+
+// Then check whether the desired string groups are in the test string by using the test() method.
+
+let testStr = "Pumpkin";
+let testRegex = /P(engu|umpk)in/;
+testRegex.test(testStr); // It will return true
+
+// Answer to the step
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Franklin|Eleanor) (([A-Z]\.?|[A-Z][a-z]+) )?Roosevelt/;
+let result = myRegex.test(myString);
+```
+
+31. Reuse Patterns Using Capture Groups
+```js
+//  Capture groups can be used to find repeated substrings.
+
+// Capture groups are constructed by enclosing the regex pattern to be captured in parentheses. In this case, the goal is to capture a word consisting of alphanumeric characters so the capture group will be \w+ enclosed by parentheses: /(\w+)/.
+
+// Answer to the step
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+) \1 \1$/; // Change this line
+let result = reRegex.test(repeatNum);
+```
+
+32. Use Capture Groups to Search and Replace
+```js
+// Searching is useful. However, you can make searching even more powerful when it also changes (or replaces) the text you match.
+
+// You can search and replace text in a string using .replace() on a string. The inputs for .replace() is first the regex pattern you want to search for. The second parameter is the string to replace the match or a function to do something.
+
+let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue");
+
+// The replace call would return the string The sky is blue..
+
+// You can also access capture groups in the replacement string with dollar signs ($).
+
+"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
+
+// The replace call would return the string Camp Code.
+
+// Answer to the step
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let result = str.replace(fixRegex, replaceText);
+```
+
+33. Remove Whitespaces from Start and End
+```js
+//  The `String.prototype.trim()` method would work here.
+
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result = hello.replace(wsRegex, ""); // Change this line
+```
