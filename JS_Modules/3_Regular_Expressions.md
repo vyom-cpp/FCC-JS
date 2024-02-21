@@ -392,4 +392,9 @@ let result = str.replace(fixRegex, replaceText);
 let hello = "   Hello, World!  ";
 let wsRegex = /^\s+|\s+$/g; // Change this line
 let result = hello.replace(wsRegex, ""); // Change this line
+
+// Using .trim()
+let hello = "   Hello, World!  ";
+let result = hello.trim();
+console.log(result); // Output: "Hello, World!"
 ```
