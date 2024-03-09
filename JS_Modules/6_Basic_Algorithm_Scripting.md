@@ -165,5 +165,94 @@ booWho(null);
 
 11. Title case a sentence
 ```js
+// The split() method splits a string into an array of substrings, returns the new array and it doesnot change the original string
+function titleCase(str) {
+  let result = "";
+  let words = str.split(" ");
+  for(let i=0; i<words.length; i++){
+    let word = words[i];
+    for(let j=0; j<word.length; j++){
+      if(j === 0){
+        result += word[j].toUpperCase();
+        // console.log(result);
+      } else{
+        result += word[j].toLowerCase();
+        // console.log(result);
+      }
+    }
+    result += " ";
+  }
+  return result.trim();
+}
+console.log(titleCase("sHoRt AnD sToUt"));
+```
 
+12. Slice and Splice
+```js
+function frankenSplice(arr1, arr2, n) {
+  let result = [];
+  result.push(...arr2.slice(0, n));
+  // console.log(result);
+  result.push(...arr1);
+  // console.log(result);
+  result.push(...arr2.slice(n, arr2.length));
+  // console.log(result);
+  return result;
+}
+console.log(frankenSplice([1, 2, 3], [4, 5], 1));
+```
+
+13. Falsy Bouncer
+```js
+function bouncer(arr) {
+  let result = [];
+  for(let i=0; i<arr.length; i++){
+    let individualValue = arr[i];
+    // console.log(individualValue);
+    if(individualValue){
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+console.log(bouncer([7, "ate", "", false, 9]));
+```
+
+14. Where do I belong
+```js
+function getIndexToIns(arr, num) {
+  let result = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (num > arr[i]) result++;
+  }
+  return result;
+}
+console.log(getIndexToIns([40, 60], 50));
+```
+
+15. Mutations
+```js
+function mutation(arr) {
+  let firstElement = arr[0].toLowerCase();
+  let secondElement = arr[1].toLowerCase();
+  for(let i=0; i<secondElement.length; i++){
+    if(firstElement.indexOf(secondElement[i]) === -1){
+      return false;
+    }
+  }
+  return true;
+}
+mutation(["hello", "hey"]);
+```
+
+16. Chunky Monkey
+```js
+function chunkArrayInGroups(arr, size) {
+  let result = [];
+  for(let i=0; i<arr.length; i += size){
+    result.push(arr.slice(i, i+size));
+  }
+  return result;
+}
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4));
 ```
