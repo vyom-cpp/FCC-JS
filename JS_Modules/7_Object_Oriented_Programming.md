@@ -119,6 +119,16 @@ let beagle = new Dog("Snoopy");
 
 11. Iterate over all Properties
 ```js
+// Own properties are defined directly on the object instance itself. And prototype properties are defined on the prototype.
+function Bird(name) {
+  this.name = name;  //own property
+}
+
+Bird.prototype.numLegs = 2; // prototype property
+
+let duck = new Bird("Donald");
+
+// Answer to the step
 function Dog(name) {
 this.name = name;
 }
@@ -163,4 +173,32 @@ numLegs: 2,
 eat: () => {console.log("eat")},
 describe: () => {console.log("name is " + this.name)}
 };
+```
+
+14. Remember to Set the Constructor Property when Changing the Prototype
+```js
+function Dog(name) {
+  this.name = name;
+}
+// Only change code below this line
+Dog.prototype = {
+  constructor: Dog,
+  numLegs: 4,
+  eat: function() {
+    console.log("nom nom nom");
+  },
+  describe: function() {
+    console.log("My name is " + this.name);
+  }
+};
+```
+
+15. Understand where an Object's Prototype Comes From
+```js
+function Dog(name) {
+  this.name = name;
+}
+let beagle = new Dog("Snoopy");
+// Only change code below this line
+Dog.prototype.isPrototypeOf(beagle);
 ```
