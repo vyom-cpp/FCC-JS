@@ -182,119 +182,7 @@ const names = users.map(user => user.name);
 // The arrow function takes each `user` object from the `users` array and returns only the `name` property of each user
 
 // Answer to the step
-// The global variable
-const watchList = [
-  {
-    "Title": "Inception",
-    "Year": "2010",
-    "Rated": "PG-13",
-    "Released": "16 Jul 2010",
-    "Runtime": "148 min",
-    "Genre": "Action, Adventure, Crime",
-    "Director": "Christopher Nolan",
-    "Writer": "Christopher Nolan",
-    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
-    "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
-    "Language": "English, Japanese, French",
-    "Country": "USA, UK",
-    "Awards": "Won 4 Oscars. Another 143 wins & 198 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-    "Metascore": "74",
-    "imdbRating": "8.8",
-    "imdbVotes": "1,446,708",
-    "imdbID": "tt1375666",
-    "Type": "movie",
-    "Response": "True"
-  },
-  {
-    "Title": "Interstellar",
-    "Year": "2014",
-    "Rated": "PG-13",
-    "Released": "07 Nov 2014",
-    "Runtime": "169 min",
-    "Genre": "Adventure, Drama, Sci-Fi",
-    "Director": "Christopher Nolan",
-    "Writer": "Jonathan Nolan, Christopher Nolan",
-    "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
-    "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-    "Language": "English",
-    "Country": "USA, UK",
-    "Awards": "Won 1 Oscar. Another 39 wins & 132 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
-    "Metascore": "74",
-    "imdbRating": "8.6",
-    "imdbVotes": "910,366",
-    "imdbID": "tt0816692",
-    "Type": "movie",
-    "Response": "True"
-  },
-  {
-    "Title": "The Dark Knight",
-    "Year": "2008",
-    "Rated": "PG-13",
-    "Released": "18 Jul 2008",
-    "Runtime": "152 min",
-    "Genre": "Action, Adventure, Crime",
-    "Director": "Christopher Nolan",
-    "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
-    "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
-    "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
-    "Language": "English, Mandarin",
-    "Country": "USA, UK",
-    "Awards": "Won 2 Oscars. Another 146 wins & 142 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
-    "Metascore": "82",
-    "imdbRating": "9.0",
-    "imdbVotes": "1,652,832",
-    "imdbID": "tt0468569",
-    "Type": "movie",
-    "Response": "True"
-  },
-  {
-    "Title": "Batman Begins",
-    "Year": "2005",
-    "Rated": "PG-13",
-    "Released": "15 Jun 2005",
-    "Runtime": "140 min",
-    "Genre": "Action, Adventure",
-    "Director": "Christopher Nolan",
-    "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
-    "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
-    "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
-    "Language": "English, Urdu, Mandarin",
-    "Country": "USA, UK",
-    "Awards": "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
-    "Metascore": "70",
-    "imdbRating": "8.3",
-    "imdbVotes": "972,584",
-    "imdbID": "tt0372784",
-    "Type": "movie",
-    "Response": "True"
-  },
-  {
-    "Title": "Avatar",
-    "Year": "2009",
-    "Rated": "PG-13",
-    "Released": "18 Dec 2009",
-    "Runtime": "162 min",
-    "Genre": "Action, Adventure, Fantasy",
-    "Director": "James Cameron",
-    "Writer": "James Cameron",
-    "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
-    "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
-    "Language": "English, Spanish",
-    "Country": "USA, UK",
-    "Awards": "Won 3 Oscars. Another 80 wins & 121 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
-    "Metascore": "83",
-    "imdbRating": "7.9",
-    "imdbVotes": "876,575",
-    "imdbID": "tt0499549",
-    "Type": "movie",
-    "Response": "True"
-  }
-];
+
 // Only change code below this line
 const ratings = watchList.map(movie => ({
   title: movie["Title"],
@@ -314,5 +202,220 @@ console.log(JSON.stringify(ratings));
 
 8. Implement map on a Prototype
 ```js
+// Map is a pure function, and its output depends solely on its inputs. Plus, it takes another function as its argument.
 
+Array.prototype.myMap = function(callback) {
+  const newArray = [];
+  // Change the code below this line
+  for (let i = 0; i < this.length; i++) {
+    newArray.push(callback(this[i], i, this));
+  }
+  // Chnage the code above this line
+  return newArray;
+};
+```
+
+9. Use Filter Method to Extract Data from an Array
+```js
+// The filter() method is used to create a new array containing elements from the original array that satisfy a specified condition. It iterates over each element of the array and applies a callback function to determine whether each element should be included in the new array.
+
+// Only change code below this line
+
+const filteredList = watchList.filter(movie => movie.imdbRating > 8).map(movie => ({
+  title: movie.Title,
+  rating: movie.imdbRating
+}));
+
+// Only change code above this line
+```
+
+10. Implement the filter method on a prototype
+```js
+Array.prototype.myFilter = function(callback) {
+  const newArray = [];
+  // Only change code below this line
+  for (let i = 0; i < this.length; i++) {
+    if (callback(this[i], i, this)) {
+      newArray.push(this[i]);
+    }
+  }
+  // Only change code above this line
+  return newArray;
+};
+```
+
+11. Return Part of an Array Using the slice Method
+```js
+function sliceArray(anim, beginSlice, endSlice) {
+  // Add your code below this line
+  return anim.slice(beginSlice, endSlice);
+  // Add your code above this line
+}
+var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+```
+
+12. Remove Elements from an Array Using Slice instead of splice
+```js
+// array.slice(startIndex, endIndex)    endIndex is not coounted
+const cities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+function nonMutatingSplice(cities) {
+  return cities.slice(0, 3);
+}
+```
+
+13. Concat Two Arrays Using the Concat Method
+```js
+function nonMutatingConcat(original, attach) {
+  // Only change code below this line
+  return original.concat(attach)
+  // Only change code above this line
+}
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingConcat([1, 2, 3], [4, 5]);
+```
+
+14. Add elements to the End of the Array using concat instead of Push
+```js
+function nonMutatingPush(original, newItem) {
+  // Only change code below this line
+  return original.concat(newItem);
+  // Only change code above this line
+}
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingPush(first, second);
+```
+
+15. Use Reduce Method to Analyze Data
+```js
+// array.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])
+function getRating(watchList){
+  // Change code below this line
+  const averageRating = watchList
+  .filter(film => film.Director === "Christopher Nolan")
+    .map(film => Number(film.imdbRating))
+    .reduce((sumOfRatings, rating) => sumOfRatings + rating) /
+  
+  watchList.filter(film => film.Director === "Christopher Nolan").length;
+  // Change code above this line
+  return averageRating;
+}
+```
+
+16. Use Higher-Order Functions map, filter, or reduce to solve a Complex Problem
+```js
+const squareList = (arr) => {
+  // Only change code below this line
+  return arr
+          .filter(num => num > 0 && num % parseInt(num) === 0)
+          .map(num => Math.pow(num, 2));
+  // Only change code above this line
+};
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+```
+
+17. Sort an Array Alphabetically using the sort method
+```js
+function alphabeticalOrder(arr) {
+  // Only change code below this line
+  return arr.sort()
+  // Only change code above this line
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+```
+
+18. Return a Sorted Array without changing the Original Array
+```js
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+// Only change code below this line
+return [].concat(arr).sort((a,b)=>{
+    return a-b;
+})
+// Only change code above this line
+}
+
+nonMutatingSort(globalArray);
+```
+
+19. Split a String into an Array Using the Split Method
+```js
+// string.split(separator, limit)
+
+// Separator: Specifies the character, or the regular expression, to use for splitting the string. This parameter is mandatory.
+
+// Limit (Optional): An integer specifying a limit on the number of splits to be found. If omitted or zero, all elements following the limit parameter are omitted and are not included in the returned array.
+
+function splitify(str) {
+  // Only change code below this line
+  return str.split(/\W/);
+  // The regular expression /\W/ matches any non-word character. In this case, it matches the comma, space, and exclamation mark in the string str.
+
+  // Only change code above this line
+}
+
+splitify("Hello World,I-am code");
+```
+
+20. Combine an Array into a String Using the join Method
+```js
+function sentensify(str) {
+  // Change code below this line
+  return str.split(/\W/).join(" ");
+  // Change code above this line
+}
+sentensify("May-the-force-be-with-you");
+```
+
+21. Apply Functional Programming to Convert Strings to URL Slugs
+```js
+const globalTitle = "Winter Is Coming";
+
+// Change code below this line
+function urlSlug(title) {
+  return title
+    .toLowerCase()
+    .trim()
+    .split(/\s+/)
+    .join("-");
+}
+// Change code above this line
+
+var winterComing = urlSlug(globalTitle); // Should be "winter-is-coming"
+```
+
+22. Use the every Method to Check that Every Element in an Array Meets a Criteria
+```js
+function checkPositive(arr) {
+  // Change code below this line
+  return arr.every(val => val > 0);
+  // Change code above this line
+}
+checkPositive([1, 2, 3, -4, 5]);
+```
+
+23. Use the some Method to Check that Any Elements in an Array Meet a Criteria
+```js
+function checkPositive(arr) {
+  return arr.some(elem => elem > 0);
+}
+checkPositive([1, 2, 3, -4, 5]);
+```
+
+24. Introduction to Currying and Partial Application
+```js
+function add(x) {
+  // Change code below this line
+  return function(y) {
+    return function(z) {
+      return x + y + z;
+    };
+  };
+  // Change code above this line
+}
+add(10)(20)(30);
 ```
